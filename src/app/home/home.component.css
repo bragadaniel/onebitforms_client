@@ -1,0 +1,26 @@
+.home{
+  background-image: url(/assets/images/background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100%;
+  width: 100%;
+  position: fixed;
+}
+.container{
+  padding-top: 10%;
+}
+.title{
+  text-transform: uppercase;
+  font-weight: 700;
+  text-shadow: 3px 3px 2px rgb(109, 109, 109);
+}
+.subtitle{
+  text-shadow: 3px 3px 2px rgb(43, 43, 43);
+}
+@media screen and (max-width: 1024px){
+  .home{
+    left: 50%;
+    margin-left: -50%;
+  }
+}

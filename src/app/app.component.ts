@@ -1,3 +1,4 @@
+import { Angular2TokenService } from 'angular2-token';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Mano';
+  constructor(private _tokenService: Angular2TokenService) {
+    this._tokenService.init({
+      apiPath: 'http://localhost:3000/api/v1',
+      signInRedirect: '/login',
+      globalOptions: {
+        headers: {
+          'Content-Type':   'application/json',
+          'Accept':         'application/json'
+        }
+      }
+    });
+  }
 }

@@ -1,5 +1,5 @@
-import { Angular2TokenService } from 'angular2-token';
 import { Component } from '@angular/core';
+import { Angular2TokenService } from 'angular2-token';
 
 @Component({
   selector: 'app-root',
@@ -13,8 +13,8 @@ export class AppComponent {
       signInRedirect: '/login',
       globalOptions: {
         headers: {
-          'Content-Type':   'application/json',
-          'Accept':         'application/json'
+          'Content-Type':     'application/json',
+          'Accept':           'application/json'
         }
       }
     });

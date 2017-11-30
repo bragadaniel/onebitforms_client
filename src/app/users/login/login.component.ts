@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Angular2TokenService, SignInData } from 'angular2-token';
-import { MzToastService } from 'ng2-materialize';
+import { MzToastService} from 'ng2-materialize';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
   constructor(
     private _tokenService: Angular2TokenService,
     private toastService: MzToastService,
@@ -27,8 +26,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/forms']);
       }, error => {
         this._signInData = <SignInData>{};
-        console.log(error._body);
-        if (error.status !== 0) {
+        if ( error.status !== 0 ) {
           for (const message of JSON.parse(error._body)['errors']) {
             this.toastService.show(message, 8000, 'red');
           }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Angular2TokenService } from 'angular2-token';
-import { MzToastService } from 'ng2-materialize';
+import { MzToastService} from 'ng2-materialize';
 
 
 @Component({
@@ -17,8 +17,8 @@ export class HeaderComponent implements OnInit {
 
   signOut() {
     this._tokenService.signOut().subscribe(
-      res => { },
-      error => this.toastService.show('Error in Logout', 8000, 'red')
+      res =>      { },
+      error =>    this.toastService.show('Error in Logout', 8000, 'red')
     );
   }
 }
